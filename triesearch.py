@@ -30,10 +30,11 @@ class TrieSearch():
                 words = line
             word_idx = 0
 
-            while len(words)>1:
+            while len(words)>=1:
                 #remove punctuation
                 w=words.pop(0)
                 word_idx += 1
+
                 w = re.sub(r'[^\w\s]', '', w)
 
                 if not w:
