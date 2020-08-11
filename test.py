@@ -33,9 +33,8 @@ Director
 Agents""".split("\n")
 
 def dump(t):
-    print ("Dumping trie:")
+    print ("trie keys:")
     for k in t.keys():
-        print(k)
         if k:
             print ("  t[%s] => %s" % (k, t[k]))
 
