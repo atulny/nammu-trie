@@ -37,12 +37,12 @@ class TrieSearch():
                 word_idx += 1
 
                 w = self.remove_punc( w)
-
                 if not w:
                     continue
                 wordnode=self.trie.get_node(w)
                 if wordnode is   None:
                     continue
+                ismatch=True
                 fnd=[w]
                 while wordnode is not None:
                     if wordnode.value_valid:
@@ -55,9 +55,10 @@ class TrieSearch():
                             fnd.append(nxt)
                             wordnode=wordnode.get_node(nxt)
                         else:
+                            ismatch=False
                             break
                     else:
                         break
-                if fnd:
+                if fnd and ismatch:
                     results.append(resulttuple((" ").join(fnd),line_idx,word_idx))
         return results
