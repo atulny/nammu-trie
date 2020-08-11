@@ -14,7 +14,7 @@ which would violate any Anti-Corruption Laws or Anti-Money Laundering Laws. Neit
 nor any officer or director or, to the knowledge of any Borrower, Affiliates, employee, agent or representative of either Borrower 
 has engaged, directly or indirectly, in any dealings or transactions with, involving or for the benefit of a Sanctioned Person,
 or in or involving a Sanctioned Country, where such dealings or transactions would violate Sanctions, in the five (5) year period
-immediately preceding the date Sanctioned hereof."""
+immediately preceding the date hereof."""
 
 Keys="""Borrower
 Subsidiaries
