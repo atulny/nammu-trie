@@ -1,0 +1,15 @@
+nammu-trie:
+    Python 3.6
+
+	A simple Trie implementation in Python.
+	- trie.py: 				the Python module
+	- triesearch.py: 		the Python module to search in given text
+	- test.py:			test for the exercise
+
+    No external dependencies
+
+To run the test:
+   - from terminal
+        python3 test.py
+
+
