@@ -2,10 +2,8 @@
 from triesearch import TrieSearch
 from trie import Trie
 import pprint
-""" Here's a couple of helper methods to print on assigment and dump the
-    trie. You don't need in practice and can just treat the Trie as any
-    other dict-like structure.
-"""
+
+
 test="""The operations of each Borrower, and the activities of the officers and directors and, to the knowledge of each Borrower, 
 any Subsidiaries of the Borrowers, employees, agents and representatives of each Borrower, while acting on behalf of such 
 Borrower, and to the knowledge of each Borrower the operations of each Material Project Party in relation to the Project, 
@@ -17,6 +15,7 @@ nor any officer or director or, to the knowledge of any Borrower, Affiliates, em
 has engaged, directly or indirectly, in any dealings or transactions with, involving or for the benefit of a Sanctioned Person,
 or in or involving a Sanctioned Country, where such dealings or transactions would violate Sanctions, in the five (5) year period
 immediately preceding the date hereof."""
+
 Keys="""Borrower
 Subsidiaries
 Material Project Party
@@ -48,9 +47,12 @@ for k in Keys:
     t[k] = True
 
 ts = TrieSearch(trie=t)
+#dump all keys
+#dump(t)
+
 #returns a tuple for each match
 results=ts.search_all_patterns(test)
 
 pprint.pprint(results)
 
-#dump(t)
+
