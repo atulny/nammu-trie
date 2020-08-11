@@ -10,7 +10,8 @@ class TrieSearch():
     def __init__(self, trie=None, splitter=r'\s+'):
         self.splitter = splitter
         self.trie=trie
-
+    def remove_punc(self,w):
+        return re.sub(r'[^\w\s]', '', w) if w else w
     def search_all_patterns(self, text):
         """
         :param text:
@@ -35,7 +36,7 @@ class TrieSearch():
                 w=words.pop(0)
                 word_idx += 1
 
-                w = re.sub(r'[^\w\s]', '', w)
+                w = self.remove_punc( w)
 
                 if not w:
                     continue
@@ -47,7 +48,7 @@ class TrieSearch():
                     if wordnode.value_valid:
                         break #terminal
                     if not wordnode.value_valid and len(words):
-                        nxt=words[0]
+                        nxt=self.remove_punc(words[0])
                         if nxt in wordnode.path:
                             words.pop(0)
                             word_idx += 1
