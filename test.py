@@ -1,4 +1,4 @@
-#!/usr/bin/python -B
+#!/usr/bin/python3
 from triesearch import TrieSearch
 from trie import Trie
 import pprint
@@ -39,7 +39,7 @@ def dump(t):
             print ("  t[%s] => %s" % (k, t[k]))
 
 
-"""  Real Samples Start Here """
+"""  test """
 
 t = Trie()
 for k in Keys:
