@@ -50,7 +50,7 @@ ts = TrieSearch(trie=t)
 #dump(t)
 
 #returns a tuple for each match
-results=ts.search_all_patterns(test)
+results=ts.search_text(test)
 
 pprint.pprint(results)
 

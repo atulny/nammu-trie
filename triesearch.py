@@ -12,7 +12,7 @@ class TrieSearch():
         self.trie=trie
     def remove_punc(self,w):
         return re.sub(r'[^\w\s]', '', w) if w else w
-    def search_all_patterns(self, text):
+    def search_text(self, text):
         """
         :param text:
         :return: a tuple( [word(s), line, word] ) for each match.
