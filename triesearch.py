@@ -18,8 +18,6 @@ class TrieSearch():
         :return: a tuple( [word(s), line, word] ) for each match.
 
         The exact match is performed for the full word ( may include spaces)
-
-        This class is not generic but based on the exercise requirements
         """
         line_idx = 0
         results=[]
